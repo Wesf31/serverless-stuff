@@ -1,0 +1,25 @@
+service: serverless-node-text-message-app
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  environment:
+    # Replace these environment variables with your Twilio and Google values
+
+
+functions:
+  validateRecaptchaSendSms:
+    handler: handler.validateAndSend
+    events:
+      - http:
+          path: api/sendSms
+          method: post
+          integration: lambda
+          cors: true
+
+plugins:
+  - serverless-finch
+
+custom:
+  client:
+    bucketName: wesley-node-text-message-app-312019-dog
