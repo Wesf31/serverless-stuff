@@ -27,6 +27,6 @@
     "request": "^2.81.0",
     "serverless": "^1.32.0",
     "serverless-finch": "^1.4.0",
-    "twilio": "^3.4.0"
+    "twilio": "^3.84.0"
   }
 }
